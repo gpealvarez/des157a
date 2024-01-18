@@ -1,0 +1,187 @@
+#banner{
+    width: 1100px;
+    height: 250px;
+    background-image: url(images/gradsparkles.png);
+    background-size: 1100px;
+}
+
+main{
+    height: 350px;
+    background-color: #fc51d3;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+    border-radius: 120px 120px 0px 0px;
+}
+
+
+header{
+    background-color:#7c17ff ;
+    display: flex;
+    justify-content: center;
+
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: Dangrek ;  
+}
+
+ul li a{
+    color: #fff9bc;
+    text-decoration: none;
+}
+
+ul li{
+    text-align: center;
+}
+
+ul li a:hover {
+    color:rgb(14, 0, 5);
+ }
+
+
+h1{
+    font-family:Dynapuff;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 4px;
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid white;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%); 
+}
+
+#banner h2{
+    font-family:Dynapuff;
+    font-size: 10px;
+    color: white;
+    position: relative;
+    top: 50%;  
+}
+
+h2{
+    font-family:Dynapuff;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+p{
+    margin: 0;
+}
+
+#contactme{
+    background-color: #fc51d3;
+    margin: 0;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.section1{
+    background-color:#fc51d3;
+    height: 50px;
+    margin-top: 0;
+    padding-left: 60px ;
+    padding-bottom: 10px;
+    padding-right: 60px;
+    border-radius: 0 0px 150px 150px;
+    transition: height 500ms;
+}
+
+.section1:hover{
+    background-color: #7c17ff;
+    margin-top: 0;
+    padding-left: 60px ;
+    padding-bottom: 70px;
+    padding-right: 60px;
+    border-radius: 0 0px 150px 150px;
+    height: 250px;
+}
+
+
+.section2{
+    background-color:#fc51d3;
+    height: 50px;
+
+    padding-left: 40px ;
+    padding-bottom: 10px;
+    padding-right: 40px;
+    border-radius: 0 0px 250px 250px;
+    transition: height 500ms;
+}
+.section2:hover{
+    background-color: #7c17ff;
+    margin-top: 0;
+    padding-left: 40px ;
+    padding-bottom: 50px;
+    padding-right: 40px;
+    border-radius: 0 0px 250px 250px;
+    height: 250px;
+
+}
+
+.section3{
+    background-color:#fc51d3;
+    height: 50px;
+    margin-top: 0;
+    padding-left: 80px ;
+    padding-bottom: 10px;
+    padding-right: 80px;
+    border-radius: 0 0px 150px 150px;
+    transition: height 500ms;
+}
+
+.section3:hover{
+    background-color: #7c17ff;
+    margin-top: 0;
+    padding-left: 80px ;
+    padding-bottom: 50px;
+    padding-right: 80px;
+    border-radius: 0 0px 150px 150px;
+    height: 250px;
+
+}
+
+footer{
+    font-family:Dynapuff;
+    font-size: 15px;
+    color: white;
+}
+
+footer a{
+    color: #7c17ff;
+    text-decoration: none;
+}
+
+
+
+body{
+    background-color: #7c17ff;
+    width: 1200px;
+    height: 655px;
+    margin-bottom: 0;
+}
+
+
+.typewriter{
+  animation: typewriter 4s steps(30) 1s 1 normal both,cursor 500ms steps(30) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 14.3em;}
+}
+@keyframes cursor{
+  from{border-right-color: white;}
+  to{border-right-color: transparent;}
+  }
