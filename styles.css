@@ -1,8 +1,10 @@
+
 #banner{
     width: 1100px;
     height: 250px;
     background-image: url(images/gradsparkles.png);
     background-size: 1100px;
+    
 }
 
 main{
@@ -84,7 +86,8 @@ p{
     margin: 0;
     text-align: center;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 5%;
+    margin: 0;
 }
 
 
@@ -140,6 +143,7 @@ p{
     padding-right: 80px;
     border-radius: 0 0px 150px 150px;
     transition: height 500ms;
+
 }
 
 .section3:hover{
@@ -157,6 +161,8 @@ footer{
     font-family:Dynapuff;
     font-size: 15px;
     color: white;
+    padding: 0;
+    margin: 0;
 }
 
 footer a{
@@ -170,8 +176,11 @@ body{
     background-color: #7c17ff;
     width: 1200px;
     height: 655px;
-    margin-bottom: 0;
-}
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+    margin: auto;}
 
 
 .typewriter{
