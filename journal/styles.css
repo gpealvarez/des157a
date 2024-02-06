@@ -3,6 +3,8 @@ h1{
     font-family:Dynapuff;
     font-size: 30px;
     color:rgb(160, 122, 247); 
+    margin-top: 100px;
+    margin-bottom: 50px;
     letter-spacing: 4px;
     position: relative;
     width: 24em;
@@ -13,8 +15,7 @@ h1{
     white-space: nowrap;
     overflow: hidden;
     transform: translateY(-50%);
-    margin-top: 100px;
-    margin-bottom: 50px;
+    
 }
 .typewriter{
     animation: typewriter 4s steps(30) 1s 1 normal both,cursor 500ms steps(30) infinite normal;

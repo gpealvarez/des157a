@@ -1,0 +1,165 @@
+body{
+    background-color: #DE477F;
+}
+
+h1{
+    font-family: DynaPuff;
+    font-weight: 400;
+    font-size: 35px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    color: white;
+    letter-spacing: 4px;
+    position: relative;
+    left: 670px;
+    width: 24em;
+    top: 50%;  
+    border-right: 2px solid rgb(255, 255, 255);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+.typewriter{
+    animation: typewriter 4s steps(30) 1s 1 normal both,cursor 500ms steps(30) infinite normal;
+  }
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 17.9em;}
+  }
+  @keyframes cursor{
+    from{border-right-color: rgb(255, 255, 255);}
+    to{border-right-color: transparent;}
+}
+
+form{
+    color: white;
+    font-family: Comfortaa;
+    font-weight: 500px;
+    font-size: 13px;
+    margin-left: 600px;
+    border: solid white;
+    margin-right: 60px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+label {
+    display: inline-block;
+    width: 230px;
+    margin-right: 10px; 
+    text-align: right; 
+    margin-bottom: 5px;
+}
+
+input {
+    color: #DE477F;
+    display: inline-block;
+    width: 130px;
+    border-radius: 30px;
+    border: solid white;
+    background-color: white;
+    text-align: center;
+    
+}
+
+
+#submit {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#submit input {
+    font-family: Comfortaa;
+    color: white;
+    font-weight: 700;
+    width: 150px;
+    padding-top: 4px;
+    background-color: #f87ca9;
+    border: solid white;
+
+}
+.brokenheart{
+    width: 550px;
+    position: absolute;
+    left: 40px;
+    bottom: 35px;
+    animation: floatUpDown 3s ease-in-out infinite;
+    top: 40px;
+}
+
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px); 
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    form{
+        color: white;
+        font-family: Comfortaa;
+        font-weight: 500px;
+        font-size: 13px;
+        margin-left: 710px;
+        background-color: #DE477F;
+        margin-right: 80px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-radius: 20px;
+        margin-top: 0;
+    }
+   
+
+    .brokenheart{
+        width: 650px;
+        position: absolute;
+        left: 40px;
+        bottom: 20px;
+        top: 40px;
+
+    }
+    
+    h1{
+        font-family: DynaPuff;
+        font-weight: 400;
+        font-size: 20px;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        color: white;
+        letter-spacing: 4px;
+        position: relative;
+        left: 710px;
+        width: 24em;
+        top: 50%;  
+        border-right: 2px solid rgb(255, 255, 255);
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        transform: translateY(-50%);
+    }
+    .typewriter{
+        animation: typewriter 4s steps(30) 1s 1 normal both,cursor 500ms steps(30) infinite normal;
+      }
+      @keyframes typewriter{
+        from{width: 0;}
+        to{width: 20.5em;}
+      }
+      @keyframes cursor{
+        from{border-right-color: rgb(255, 255, 255);}
+        to{border-right-color: transparent;}
+    }
+
+    #submit {
+        margin-top: 10px;
+        text-align: center;
+    }
+}
