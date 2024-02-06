@@ -65,6 +65,15 @@ input {
     
 }
 
+input[type=text]:focus{
+ box-shadow: 0px 0px 8px 3px rgba(255,255,255,1);
+
+}
+input:hover{
+    box-shadow: 0px 0px 8px 3px rgba(255,255,255,1);
+ 
+}
+
 
 #submit {
     margin-top: 20px;
@@ -81,6 +90,13 @@ input {
     border: solid white;
 
 }
+
+#submit input:hover{
+    box-shadow: 0px 0px 8px 3px rgba(255,255,255,1);
+    background:  #DE477F;
+
+}
+
 .brokenheart{
     width: 550px;
     position: absolute;
@@ -162,4 +178,21 @@ input {
         margin-top: 10px;
         text-align: center;
     }
+}
+
+.hidden{
+    display: none;
+}
+
+.showing{
+    display: block;
+}
+
+#overlay{
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width:100vw;
+    height:100vh;
 }

@@ -156,6 +156,7 @@
             document.querySelector('#verb1').value = "";
             document.querySelector('#adj1').value = "";
             document.querySelector('#momentintime').value = "";
+            document.querySelector('#adj2').value = "";
             document.querySelector('#animalplural').value = "";
             document.querySelector('#bodypart1').value = "";
             document.querySelector('#verb2').value = "";
@@ -187,13 +188,14 @@
             
             <p>I don’t think you are ${adj4} enough to be in a relationship, and I honestly cannot see this situation getting ${adj5} anytime soon. I truly hope you ${verb8}, and realize that everything you did was ${adj6}. I wish you the best and I will forever remember you as my ${adj7} ${noun3}.</p>
             
-            <p>With ${adverb}, ${name2}.</p>`;
+            <p>With ${noun4}, ${name2}.</p>`;
 
         }else{
             myText = "give me words!!!"
         }
 
         myMadlib.innerHTML= myText;
+        //my madlib is what will show as overlay i think
 
     }
 
