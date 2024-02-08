@@ -35,7 +35,6 @@ h1{
 form{
     color: white;
     font-family: Comfortaa;
-    font-weight: 500px;
     font-size: 13px;
     margin-left: 600px;
     border: solid white;
@@ -97,6 +96,49 @@ input:hover{
 
 }
 
+.hidden{
+    display:none;
+}
+
+.showing{
+    display: block;
+}
+
+#overlay{
+    position: fixed;
+    background-image: url(images/singleheart.svg);
+    background-color: #DE477F;
+    top: 0;
+    left: 0;
+    width:100vw;
+    height:100vh;
+    z-index: 9999;
+    background-size: 40px;
+}
+
+#madlib {
+    font-size: 13px;
+    font-family: Indie Flower;
+    position: absolute;
+    top: 27%;
+    left: 39.5%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    z-index: 2; 
+    margin-top: 40px;
+    margin-left: 150px;
+    margin-right: 350px;
+}
+#card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; 
+    margin: auto;
+    width: 650px;
+}
+
+
 .brokenheart{
     width: 550px;
     position: absolute;
@@ -105,7 +147,6 @@ input:hover{
     animation: floatUpDown 3s ease-in-out infinite;
     top: 40px;
 }
-
 
 @keyframes floatUpDown {
     0% {
@@ -120,10 +161,23 @@ input:hover{
 }
 
 @media only screen and (max-width: 1200px) {
+
+    #madlib {
+        font-size: 13px;
+        font-family: Indie Flower;
+        position: absolute;
+        top: 30%;
+        left: 46%;
+        transform: translate(-50%, -50%) rotate(-5deg);
+        z-index: 2; 
+        margin-top: 40px;
+        margin-left: 50px;
+        margin-right: 230px;
+    }
+
     form{
         color: white;
         font-family: Comfortaa;
-        font-weight: 500px;
         font-size: 13px;
         margin-left: 710px;
         background-color: #DE477F;
@@ -178,21 +232,4 @@ input:hover{
         margin-top: 10px;
         text-align: center;
     }
-}
-
-.hidden{
-    display: none;
-}
-
-.showing{
-    display: block;
-}
-
-#overlay{
-    position: absolute;
-    background-color: white;
-    top: 0;
-    left: 0;
-    width:100vw;
-    height:100vh;
 }

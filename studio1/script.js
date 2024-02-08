@@ -141,7 +141,8 @@
             document.querySelector('#name2').focus();
             
         }  else{
-            myText = `Dear, ${name1}
+            document.querySelector('#overlay').className = "showing";
+            myText = `Dear ${name1},
 
             I am writing this letter because I don’t have the ${noun1} to tell you this in person. I have been ${verb1} about doing this this for a while, and I honestly think it is the ${adj1} decision for the both of us.
             
@@ -180,7 +181,7 @@
 
 
         if(name1 && noun1 && verb1 && adj1 && momentintime && adj2 && animalplural && bodypart1 && verb2 && adj3 && verb3 && verb4 && object && bodypart2 && verb5 && verb6 && noun2 && verb7 && adj4 && adj5 && verb8 && adj6 && adj7 && noun3 && noun4 && name2){
-            myText = `<p>Dear, ${name1}</p>
+            myText = `<p>Dear ${name1},</p>
 
             <p>I am writing this letter because I don’t have the ${noun1} to tell you this in person. I have been ${verb1} about doing this this for a while, and I honestly think it is the ${adj1} decision for the both of us.</p>
             
@@ -196,11 +197,14 @@
 
         myMadlib.innerHTML= myText;
         //my madlib is what will show as overlay i think
-
     }
 
     });
 
-    
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            document.querySelector('#overlay').className = "hidden";
+        }
+    });
 
 })();
