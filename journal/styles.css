@@ -6,7 +6,7 @@ h1{
     letter-spacing: 4px;
     position: relative;
     width: 24em;
-    margin: 0 auto;
+    margin: auto;
     top: 70%;  
     border-right: 2px solid black;
     text-align: center;
