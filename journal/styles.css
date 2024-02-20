@@ -110,6 +110,19 @@ footer a{
 }
 
 span{
-        color:rgb(182, 158, 238); 
+    color:rgb(182, 158, 238); 
 
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+figcaption{
+    font-family: Comfortaa;
+    text-align: center;
+    color: rgb(151, 151, 151);
+    margin-top: 15px;
+    font-size: 12px;
 }
