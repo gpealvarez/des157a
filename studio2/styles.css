@@ -1,0 +1,192 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	color: #333;
+}
+
+main {
+	width: 30vw;
+	padding: 25px;
+	background-color: white;
+}
+
+section {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+h1{
+	font-family: Comfortaa;
+	font-weight: 700;
+	color: rgb(249,103,129);
+	font-size: 70px;
+	margin-top: 10px;
+
+}
+
+h2{
+	font-family: Comfortaa;
+	font-weight: 700;
+	color: rgb(249,103,129);
+	font-size: 30px;
+}
+
+main a{
+	color: rgb(249,103,129);
+	text-decoration: none;
+	font-family: Comfortaa;
+	font-weight: 700;
+	font-size: 12px;
+	padding: 6px;
+	border: 2px solid;
+
+}
+
+p {
+	font-family: Comfortaa;
+	line-height: 1.3em;
+	font-weight: 400;
+	font-size: 15px;
+}
+
+figure {
+	display: block;
+	margin: 0;
+	width: 70vw;
+	height: 100vh;
+	position: fixed;
+	top:0;
+	right:0;
+	overflow: hidden;
+}
+
+figure img {
+	position: absolute;
+	transition: all 3s ease;
+}
+
+.sect1{
+	width: 140vh;
+	top:0;
+	left: 50%;
+	transform:translateX(-50%);
+	
+}
+figure figcaption{
+	width: 50%;
+	position: absolute;
+	top: 10%;
+	left: 80%;
+	transform: translateX(-50%);
+	padding: 20px;
+	line-height: 1.5em;
+}
+figcaption img{
+	width: 300px;
+	padding: 20px;
+	padding-bottom: 50px;
+	background-color: white;
+	box-shadow: 0px 0px 5px 3px rgba(148,148,148,0.49);
+
+}
+
+.animate {
+	animation-duration: 700ms;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(0.075, 0.820, 0.165, 1.000);
+}
+
+.enterup {
+	animation-name: enterup;
+}
+
+.enterdown {
+	animation-name: enterdown;
+}
+
+.exitup {
+	animation-name: exitup;
+}
+
+.exitdown {
+	animation-name: exitdown;
+}
+
+@keyframes enterup {
+	0% {
+		top: 150%;
+		opacity: 0;
+	}
+	100% {
+		top: 10%;
+		opacity: 1;
+	}
+}
+
+@keyframes enterdown {
+	0% {
+		top: -50%;
+		opacity: 0;
+	}
+	100% {
+		top: 10%;
+		opacity: 1;
+	}
+}
+
+@keyframes exitup {
+	0% {
+		top: 10%;
+		opacity: 1;
+	}
+	100% {
+		top: -50%;
+		opacity: 0;
+	}
+}
+
+@keyframes exitdown {
+	0% {
+		top: 10%;
+		opacity: 1;
+	}
+	100% {
+		top: 150%;
+		opacity: 0;
+	}
+}
+
+
+
+.sect2,
+.sect3,
+.sect4{
+    width: 3500px;
+}
+
+.sect2 {
+	top: calc(-2500px + 265vh);
+    left: calc(-3500px + 190vw);
+}
+
+.sect3 {
+	top: calc(-2500px + 160vh);
+    left: calc(-3500px + 175vw);
+}
+
+.sect4 {
+	top: calc(-2500px + 160vh);
+    left: calc(-3500px + 115vw);
+}
+
+.sect5{
+	top: calc(-2500px + 150vh);
+    left: calc(-3500px + 85vw);
+
+}
+
+
