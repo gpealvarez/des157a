@@ -1,25 +1,123 @@
 body {
     font-family: Arial;
+    background-color: #F97DAD;;
     color: #333;
-    padding: 50px;
     line-height: 1.5em;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
 }
 
-button { 
-    padding: 10px;
-}
-
-div {
+h1{
+    text-align: center;
+    background-color: rgb(255, 229, 244);
+    margin: 0;
     padding: 20px;
 }
 
-#gamecontrol, #score {
-    background-color: aliceblue;
+.flip{
+    text-align: center;
+
 }
 
-#game {
-    background-color:#eaeaea;
+div {
+    padding: 10px;
+    background-color: rgb(255, 229, 244);
+
 }
+div #game {
+    padding: 0;
+}
+
+#quitbtn {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    background-color: rgb(250, 202, 230);
+}
+#gamecontrol, #score {
+    background-color: rgb(255, 229, 244);
+    margin: 0;
+    padding: 0;
+}
+
+#gamecontrol, img {
+text-align: center;
+padding-top: 20px;
+}
+
+#game img{
+    margin-top:50px ;
+    position: absolute;
+    top: 0;
+    left: 51%;
+    transform: translateX(-50%);
+    padding: 20px;
+}
+
+#game{
+    padding: 0;
+}
+
+#game p{
+    margin-top:50px ;
+    position: absolute;
+    top: 290px;
+    left: 51%;
+    transform: translateX(-50%);
+    padding: 20px;
+}
+
 #actions {
-    background-color: silver;
+    background-color: rgb(255, 229, 244);
+    padding-bottom: 20px;
+}
+.coin-container {
+    margin-top:30px ;
+    position: relative;
+    text-align: center;
+}
+
+.coin-image {
+    position: absolute;
+    top: -50px;
+    left: 51%;
+    transform: translateX(-50%);
+    padding: 20px;
+}
+
+.piggy-image{
+    padding-top: 100px;
+}
+
+button{
+    display: block;
+    margin: 0 auto;
+    background-color: #fcaac9;
+    border:none;
+    border-width: 5px;
+    border-radius: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 55px;
+    padding-right: 55px;}
+
+.buttons-container {
+    text-align: center;
+}
+.buttons-container button {
+    display: inline-block;
+    margin-right: 20px; /* Adjust as needed */
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+.buttons-container #pass {
+    padding-left: 55px;
+    padding-right: 55px;
+
+}
+
+p{
+    margin: 0;
 }
