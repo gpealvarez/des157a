@@ -1,6 +1,6 @@
 body {
     font-family: Arial;
-    background-color: #F97DAD;;
+    background-color: #F97DAD;
     color: #333;
     line-height: 1.5em;
     padding-top: 50px;
@@ -120,4 +120,9 @@ button{
 
 p{
     margin: 0;
+}
+
+.eachscore{
+    display: flex;
+    text-align: center;
 }

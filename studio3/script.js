@@ -31,7 +31,7 @@
 
     });
 
-function setUpTurn(){
+    function setUpTurn(){
     // Set up the HTML structure
     gameControl.innerHTML = `
         <div class="coin-container">
@@ -57,10 +57,6 @@ function setUpTurn(){
     }
 }
 
-    
-
-
-
 function throwDice(){
     actionArea.innerHTML = '';
     gameData.flip = Math.floor(Math.random() * 6) + 1;
@@ -72,14 +68,14 @@ function throwDice(){
         //console.log ('fake coin');
         showCurrentScore();
 
-        game.innerHTML += '<p> Fake Coin! </p>';
+        game.innerHTML = '<p> Fake Coin! </p>';
         gameData.score[gameData.index] = 0;
         gameData.index ? (gameData.index = 0) : (gameData.index = 1);
         setTimeout(setUpTurn,2000);
 
     } else if (gameData.flip === 1){
         gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-        game.innerHTML +=`<p> your flip resulted on a one dollar coin, switching to ${gameData.players[gameData.index]}</p>`;
+        game.innerHTML =`<p> your flip resulted on a one dollar coin, switching to ${gameData.players[gameData.index]}</p>`;
         setTimeout(setUpTurn,2000);
 
     } else {
@@ -114,23 +110,26 @@ function throwDice(){
     checkWinningCondition();
 }
 
+function checkWinningCondition(){
+    if (gameData.score [gameData.index] > gameData.gameEnd) {
+        score.innerHTML = `<h2>${gameData.players [gameData.index]}
+        wins with ${gameData.score [gameData.index]} coins!</h2>`;
 
-    function checkWinningCondition(){
-        if (gameData.score [gameData.index] > gameData.gameEnd) {
-            score.innerHTML = `<h2>${gameData.players [gameData.index]}
-            wins with ${gameData.score [gameData.index]} coins!</h2>`;
+        actionArea.innerHTML = '';
+        document. getElementById('quit').innerHTML = "Start New Game";
+    }else{
+        showCurrentScore();
+    }
+}
 
-            actionArea.innerHTML = '';
-            document. getElementById('quit').innerHTML = "Start New Game";
-        }else{
-            showCurrentScore();
-        }
-    }
-    
-    function showCurrentScore(){
-        score.innerHTML = `<p><strong>${gameData.players[0]} ${gameData.score[0]}</strong></p>
-        <p><strong> ${gameData.players[1]} ${gameData.score[1]}</strong></p>`;
-    }
+function showCurrentScore() {
+    score.innerHTML = `
+    <div class="eachscore"> 
+        <p ><strong>${gameData.players[0]} ${gameData.score[0]}</strong></p>
+        <p><strong>${gameData.players[1]} ${gameData.score[1]}</strong></p>
+    </div>`;
+
+}// add id for each p to edit individually and center maybe
 
 })();
 

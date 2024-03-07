@@ -1,0 +1,149 @@
+#banner{
+    margin-top: 50px;
+}
+
+#banner a{
+	color: rgb(249,103,129);
+	text-decoration: none;
+	font-family: Comfortaa;
+	font-weight: 700;
+	font-size: 12px;
+	padding: 6px;
+	border: 2px solid;
+    margin-top: 50px;
+
+}
+
+h1 {
+    font-family: Dynapuff;
+    font-size: 30px;
+    color: rgb(255, 96, 141);
+    letter-spacing: 4px;
+    position: relative;
+    width: 100%;
+    margin: 50px auto 50px;
+    top: 20px;
+    border-right: 2px solid black;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+.typewriter {
+    animation: typewriter 4s steps(30) 1s 1 normal both, cursor 500ms steps(30) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 17em;
+    }
+}
+
+@keyframes cursor {
+    from {
+        border-right-color: black;
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+h2 {
+    font-family: Comfortaa;
+    font-weight: 700px;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 28em;
+    color: #F97DAD;
+}
+
+body {
+    background-color: rgb(255, 229, 244);
+    margin-left: 230px;
+    margin-right: 230px;
+}
+
+p {
+    font-family: Tajawal;
+    color: rgb(40, 40, 40);
+    font-size: 20px;
+    font-family: 300px;
+    max-width: 35em;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#topdeco {
+    font-family: Dynapuff;
+    font-weight: 500;
+    color: rgb(182, 158, 238);
+    text-align: center;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#bottomdeco {
+    color: rgb(182, 158, 238);
+    text-align: center;
+    font-size: 25px;
+}
+
+p a {
+    text-decoration: none;
+    color: rgb(182, 158, 238);
+}
+
+hr {
+    border-top: 3px solid rgb(255, 96, 141);
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+#contactme {
+    font-family: Tajawal;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+footer p {
+    margin-bottom: 5px;
+    margin: 20px auto;
+}
+
+footer a {
+    color: rgb(255, 96, 141);
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+span {
+    color: rgb(255, 96, 141);
+}
+
+
+figcaption {
+    font-family: Comfortaa;
+    text-align: center;
+    color: rgb(151, 151, 151);
+    margin-top: 15px;
+    font-size: 12px;
+}
