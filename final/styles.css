@@ -56,7 +56,7 @@ h1 {
 
 h2 {
     font-family: Comfortaa;
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 25px;
     margin-top: 10px;
     margin-bottom: 5px;
@@ -76,7 +76,6 @@ p {
     font-family: Tajawal;
     color: rgb(40, 40, 40);
     font-size: 20px;
-    font-family: 300px;
     max-width: 35em;
     margin-top: 10px;
     margin-left: auto;
