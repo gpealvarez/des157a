@@ -1,53 +1,74 @@
+/* Body styling */
 body {
-    font-family: Arial;
+    font-family: "Dynapuff";
+    font-weight: 700;
     background-color: #F97DAD;
     color: #333;
     line-height: 1.5em;
     padding-top: 50px;
-    padding-bottom: 50px;
-
 }
 
-h1{
+/* Heading 1 styling */
+h1 {
     text-align: center;
     background-color: rgb(255, 229, 244);
     margin: 0;
     padding: 20px;
 }
 
-.flip{
+/* Styling for the flip class */
+.flip {
     text-align: center;
-
 }
 
+/* Padding for all divs */
 div {
     padding: 10px;
-    background-color: rgb(255, 229, 244);
-
 }
-div #game {
+
+/* Styling for the game div */
+div#game {
     padding: 0;
 }
 
+/* Styling for the quit button container */
 #quitbtn {
-    padding-top: 20px;
+    padding-top: 0;
     padding-bottom: 20px;
-
-    background-color: rgb(250, 202, 230);
+    padding-left: 80%;
+    background-color: rgb(255, 229, 244);
 }
-#gamecontrol, #score {
+
+/* Styling for buttons within the quit button container */
+#quitbtn button {
+    font-size: 16px;
+    padding: 10px 30px;
+}
+
+/* Styling for the flip button */
+#flip {
+    font-size: 20px;
+    padding: 10px 30px;
+}
+
+/* Styling for game control and score containers */
+#gamecontrol,
+#score {
     background-color: rgb(255, 229, 244);
     margin: 0;
     padding: 0;
 }
 
-#gamecontrol, img {
-text-align: center;
-padding-top: 20px;
+/* Alignment and padding for game control and images */
+#gamecontrol,
+img {
+    text-align: center;
+    padding-top: 20px;
 }
 
-#game img{
-    margin-top:50px ;
+/* Styling for images within the game */
+#game img {
+    margin-top: 50px;
     position: absolute;
     top: 0;
     left: 51%;
@@ -55,29 +76,35 @@ padding-top: 20px;
     padding: 20px;
 }
 
-#game{
-    padding: 0;
-}
-
-#game p{
-    margin-top:50px ;
+/* Styling for game paragraphs */
+#game p {
+    font-family: "Dynapuff";
+    color: #bb4480;
+    font-size: 20px;
+    text-align: center;
+    max-width: 200px;
+    margin-top: 45px;
     position: absolute;
-    top: 290px;
+    top: 270px;
     left: 51%;
     transform: translateX(-50%);
     padding: 20px;
 }
 
+/* Styling for actions container */
 #actions {
     background-color: rgb(255, 229, 244);
-    padding-bottom: 20px;
+    padding: 0;
 }
+
+/* Styling for coin container */
 .coin-container {
-    margin-top:30px ;
+    margin-top: 30px;
     position: relative;
     text-align: center;
 }
 
+/* Styling for coin image */
 .coin-image {
     position: absolute;
     top: -50px;
@@ -86,43 +113,94 @@ padding-top: 20px;
     padding: 20px;
 }
 
-.piggy-image{
+/* Styling for piggy image */
+.piggy-image {
     padding-top: 100px;
 }
 
-button{
+/* Styling for piggy image 2 */
+.piggy-image2 {
+    padding-top: 100px;
+    margin-left: 30px;
+}
+
+/* Styling for buttons */
+button {
     display: block;
     margin: 0 auto;
     background-color: #fcaac9;
-    border:none;
-    border-width: 5px;
+    border: none;
     border-radius: 50px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 55px;
-    padding-right: 55px;}
+    padding: 15px 55px;
+}
 
+/* Styling for buttons container */
 .buttons-container {
     text-align: center;
+    padding-top: 0;
 }
+
+/* Styling for buttons within buttons container */
 .buttons-container button {
     display: inline-block;
-    margin-right: 20px; /* Adjust as needed */
-    padding-left: 40px;
-    padding-right: 40px;
-
+    margin-right: 20px;
+    padding: 15px 40px;
 }
+
+/* Additional styling for pass button within buttons container */
 .buttons-container #pass {
-    padding-left: 55px;
-    padding-right: 55px;
-
+    padding: 15px 55px;
 }
 
-p{
+/* Styling for paragraphs */
+p {
     margin: 0;
 }
 
-.eachscore{
+/* Styling for score display */
+.eachscore {
+    font-family: "Bebas Neue";
+    font-size: 40px;
     display: flex;
+    justify-content: space-between;
     text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    max-width: 85%;
+    margin: 0 auto;
+    z-index: 9999;
+}
+
+/* Styling for rights paragraph */
+#rights {
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+/* Styling for lefts paragraph */
+#lefts {
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+/* Styling for winning class */
+.winning {
+    text-align: center;
+    position: absolute;
+    top: 500px;
+    left: 51%;
+    transform: translateX(-50%);
+    padding: 20px;
+    z-index: 9999;
+}
+
+/* Styling for instructions at beginning  */
+#instructions {
+    margin: 20px auto;
+    font-family: Comfortaa;
+    font-size: 16px;
+    max-width: 60em;
 }
