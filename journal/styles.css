@@ -126,3 +126,8 @@ figcaption{
     margin-top: 15px;
     font-size: 12px;
 }
+
+iframe{
+    display: block;
+    margin: 0 auto;
+}
