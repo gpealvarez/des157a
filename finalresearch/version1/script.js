@@ -21,14 +21,6 @@
         gameEnd: 29 // Game duration
     };
 
-    // Audio setup
-    const moneyinc = new Audio('sounds/moneyinc.mp3');
-    const moneydec = new Audio('sounds/moneydec.mp3');
-    const btnsound = new Audio('sounds/buttonsound.mp3');
-    const flipsound = new Audio('sounds/coinflinp.mp3');
-    const quitbsound = new Audio('sounds/buttonsound.mp3');
-
-
     // Event listener for the "Start Game" button
     startGame.addEventListener('click', function () {
         // Setting up the initial game interface
@@ -39,10 +31,6 @@
         // Setting up the initial turn and displaying the current score
         setUpTurn();
         showCurrentScore();
-    });
-
-    startGame.addEventListener('mousedown', function () {
-        btnsound.play();
     });
 
     // Function to set up a new turn
@@ -60,12 +48,6 @@
 
         document.getElementById('flip').addEventListener('click', throwDice);
 
-        const flipbtn = document.querySelector('#flip');
-
-        flipbtn.addEventListener('mousedown', function () {
-            flipsound.play();
-        });
-
         // Adding the "Quit" button if it doesn't already exist
         if (!document.getElementById('quit')) {
             quitbtn.innerHTML += '<button id="quit">QUIT</button>';
@@ -73,12 +55,6 @@
                 location.reload();
             });
         }
-
-        const quitb = document.querySelector('#quit');
-
-        quitb.addEventListener('mousedown', function () {
-            quitbsound.play();
-        });
     }
 
     // Function to simulate the dice roll
@@ -87,7 +63,7 @@
         gameData.flip = Math.floor(Math.random() * 6) + 1;
         game.innerHTML += `<img src='${gameData.dice[gameData.flip - 1]}' width="150px">`;
         gameData.flipSum = gameData.flip;
-    
+
         if (gameData.flipSum === 6) {
             // If a fake coin is flipped
             showCurrentScore();
@@ -96,31 +72,24 @@
             gameData.score[gameData.index] = 0;
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             setTimeout(setUpTurn, 2000);
-            moneydec.play();
         } else if (gameData.flip === 1) {
             // If a $1 coin is flipped
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             game.innerHTML = `<p>A dollarcoin :( switching players</p>`;
             game.innerHTML += `<img src='${gameData.dice[gameData.flip - 1]}' width="150px">`;
             setTimeout(setUpTurn, 2000);
-            moneydec.play();
-
         } else {
             // If a regular coin is flipped
             gameData.score[gameData.index] += gameData.flipSum;
             const buttonsContainer = document.createElement('div');
             buttonsContainer.classList.add('buttons-container');
-    
-            const flipAgainButton = createButton('Flip Again', 'flipagain', function () {
-                setUpTurn();
-                btnsound.play(); 
-            });
+
+            const flipAgainButton = createButton('Flip Again', 'flipagain', setUpTurn);
             const passButton = createButton('Pass', 'pass', function () {
                 gameData.index ? (gameData.index = 0) : (gameData.index = 1);
                 setUpTurn();
-                moneyinc.play();
             });
-    
+
             buttonsContainer.appendChild(flipAgainButton);
             buttonsContainer.appendChild(passButton);
             actionArea.appendChild(buttonsContainer);

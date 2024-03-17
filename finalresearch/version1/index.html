@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piggy Game</title>
+    <!-- Normalize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dangrek&family=DynaPuff:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="score"></div>
+    <div id="gamecontrol">
+        <h1>Piggy Game</h1>
+        <img src="images/piggy.png" alt="piggy left" width="500">
+        <p id="instructions">Welcome to the Piggy Game! It's a two-player challenge where victory goes to the one with the most coins in their piggy bank. Aim for high-value coins, and if luck is on your side, keep flipping until you're satisfied with your haul before passing the turn. Beware of Fake Coins because they are illegal, and if you draw one, you lose all your money. And if you land on a $1 coin, your luck runs out, and it's the other player's turn. Ready to play?</p>
+        <button id="startgame">Randomly pick first player and start!</button>
+    </div>
+    <div id="game"></div>
+    <div id="actions"></div>
+    <div id="quitbtn"></div>
+</body>
+</html>
