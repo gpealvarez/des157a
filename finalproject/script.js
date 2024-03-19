@@ -1,6 +1,7 @@
 (function () {
-    'use strict';
-    console.log('reading JS');
+    'use strict'; // Enforce strict mode for better error handling
+
+    console.log('reading JS'); // Log to console for debugging
 
     // Selecting necessary elements from the DOM
     const startGame = document.querySelector('#startgame');
@@ -9,12 +10,12 @@
     const score = document.querySelector('#score');
     const actionArea = document.querySelector('#actions');
     const quitbtn = document.querySelector('#quitbtn');
-    const instbtn = document.querySelector('#instbtn'); // Select the button
-    const instdiv = document.querySelector('#instructions'); // Select the instructions div
+    const instbtn = document.querySelector('#instbtn');
+    const instdiv = document.querySelector('#instructions');
     const player1Name = document.getElementById('player1').value || 'Player One';
     const player2Name = document.getElementById('player2').value || 'Player Two';
 
-    // Game data object containing various game parameters
+    // Object containing game data
     const gameData = {
         dice: ['images/onedolla.png', 'images/2dolla.png', 'images/3dolla.png', 'images/4dolla.png', 'images/5dolla.png', 'images/fakedolla.png'],
         players: ['Player One', 'Player Two'],
@@ -25,8 +26,7 @@
         gameEnd: 29 // Game duration
     };
 
-
-    // Audio setup
+    // Audio elements setup
     const moneyinc = new Audio('sounds/moneyinc.mp3');
     const moneydec = new Audio('sounds/moneydec.mp3');
     const btnsound = new Audio('sounds/buttonsound.mp3');
@@ -34,60 +34,50 @@
     const quitbsound = new Audio('sounds/buttonsound.mp3');
     const winsound = new Audio('sounds/winner.mp3');
 
-
-    // Function to toggle the visibility of the instructions
+    // Function to toggle visibility of instructions
     function showinst() {
         if (instdiv.classList.contains('hidden')) {
             instdiv.classList.remove('hidden');
         } else {
             instdiv.classList.add('hidden');
         }
-        btnsound.play();
-
+        btnsound.play(); // Play button sound
     }
 
+    // Function to close instructions
     function closeinst() {
         instdiv.classList.add('hidden');
-        btnsound.play();
-
+        btnsound.play(); // Play button sound
     }
-    
-    // Add event listener to the button
-    instbtn.addEventListener('click', showinst);
 
+    // Event listeners for instruction buttons
+    instbtn.addEventListener('click', showinst);
     document.querySelector('.closebtn').addEventListener('click', closeinst);
 
-
-    // Event listener for the "Start Game" button
+    // Event listener for starting the game
     startGame.addEventListener('click', function () {
-        // Retrieving player names from input fields
         const player1Input = document.getElementById('player1');
         const player2Input = document.getElementById('player2');
         const player1Name = player1Input.value.trim() || 'Player One';
         const player2Name = player2Input.value.trim() || 'Player Two';
-    
-        // Updating the gameData object with player names
         gameData.players = [player1Name, player2Name];
-    
-        // Setting up the initial game interface
         gameControl.innerHTML = `<h1>Piggy Game</h1><img src="images/piggy.png" alt="piggy left" width="500px">`;
-    
-        // Randomly selecting the starting player
         gameData.index = Math.round(Math.random());
-    
-        // Setting up the initial turn and displaying the current score
         setUpTurn();
         showCurrentScore();
     });
-    document.addEventListener('DOMContentLoaded', function() {
+
+    // Event listener for when DOM content is loaded
+    document.addEventListener('DOMContentLoaded', function () {
         const introverlay = document.getElementById('introverlay');
-        
-        setTimeout(function() {
-          introverlay.classList.add('hide');
+        setTimeout(function () {
+            introverlay.classList.add('hide');
         }, 1000);
-      });
+    });
+
+    // Event listener for mouse down on start button
     startGame.addEventListener('mousedown', function () {
-        btnsound.play();
+        btnsound.play(); // Play button sound
     });
 
     // Function to set up a new turn
@@ -95,25 +85,30 @@
         const piggyImageClass = gameData.index === 0 ? 'piggy-image' : 'piggy-image2';
         const piggyImageSrc = gameData.index === 0 ? 'images/piggy.png' : 'images/piggyflipped.png';
 
+        // Display piggy image and coin image
         gameControl.innerHTML = `<div class="coin-container">
             <img src="${piggyImageSrc}" alt="piggy left" width="520px" class="${piggyImageClass}">
             <img src="images/dollasigncoin.png" alt="simplecoin" width="150px" class="coin-image">
         </div>`;
 
+        // Display current player's turn
         game.innerHTML = `<p>${gameData.players[gameData.index]}'s Turn</p>`;
         actionArea.innerHTML = '<button id="flip">Flip Coin</button>';
 
+        // Event listener for flipping the coin
         document.getElementById('flip').addEventListener('click', throwDice);
 
         const flipbtn = document.querySelector('#flip');
 
+        // Event listener for mouse down on flip button
         flipbtn.addEventListener('mousedown', function () {
-            flipsound.play();
+            flipsound.play(); // Play flip sound
         });
 
         // Adding the "Quit" button if it doesn't already exist
         if (!document.getElementById('quit')) {
             quitbtn.innerHTML += '<button id="quit">QUIT</button>';
+            // Event listener for quitting the game
             document.getElementById('quit').addEventListener('click', function () {
                 location.reload();
             });
@@ -121,10 +116,11 @@
 
         const quitb = document.querySelector('#quit');
 
+        // Event listener for mouse down on quit button
         quitb.addEventListener('mousedown', function () {
-            quitbsound.play();
+            quitbsound.play(); // Play quit sound
         });
-        
+
     }
 
     // Function to simulate the dice roll
@@ -133,7 +129,7 @@
         gameData.flip = Math.floor(Math.random() * 6) + 1;
         game.innerHTML += `<img src='${gameData.dice[gameData.flip - 1]}' width="150px">`;
         gameData.flipSum = gameData.flip;
-    
+
         if (gameData.flipSum === 6) {
             // If a fake coin is flipped
             showCurrentScore();
@@ -142,31 +138,31 @@
             gameData.score[gameData.index] = 0;
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             setTimeout(setUpTurn, 2000);
-            moneydec.play();
+            moneydec.play(); // Play money decrease sound
         } else if (gameData.flip === 1) {
             // If a $1 coin is flipped
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             game.innerHTML = `<p>A dollarcoin :( switching players</p>`;
             game.innerHTML += `<img src='${gameData.dice[gameData.flip - 1]}' width="150px">`;
             setTimeout(setUpTurn, 2000);
-            moneydec.play();
+            moneydec.play(); // Play money decrease sound
 
         } else {
             // If a regular coin is flipped
             gameData.score[gameData.index] += gameData.flipSum;
             const buttonsContainer = document.createElement('div');
             buttonsContainer.classList.add('buttons-container');
-    
+
             const flipAgainButton = createButton('Flip Again', 'flipagain', function () {
                 setUpTurn();
-                btnsound.play(); 
+                btnsound.play(); // Play button sound
             });
             const passButton = createButton('Pass', 'pass', function () {
                 gameData.index ? (gameData.index = 0) : (gameData.index = 1);
                 setUpTurn();
-                moneyinc.play();
+                moneyinc.play(); // Play money increase sound
             });
-    
+
             buttonsContainer.appendChild(flipAgainButton);
             buttonsContainer.appendChild(passButton);
             actionArea.appendChild(buttonsContainer);
@@ -174,36 +170,35 @@
         checkWinningCondition();
     }
 
-// Function to display the winner and show the outro overlay
-function showWinner() {
-    const winnerText = document.getElementById('winnerText');
-    const outroOverlay = document.getElementById('outroverlay');
-    
-    const winner = gameData.score[0] > gameData.score[1] ? gameData.players[0] : gameData.players[1];
-    winnerText.textContent = `${winner} wins with ${Math.max(...gameData.score)} coins!`;
+    // Function to display the winner and show the outro overlay
+    function showWinner() {
+        const winnerText = document.getElementById('winnerText');
+        const outroOverlay = document.getElementById('outroverlay');
 
-    outroOverlay.classList.remove('hidden');
-}
+        const winner = gameData.score[0] > gameData.score[1] ? gameData.players[0] : gameData.players[1];
+        winnerText.textContent = `${winner} wins with ${Math.max(...gameData.score)} coins!`;
 
-// Event listener for the "Start New Game" button
-document.getElementById('startNewGame').addEventListener('click', function () {
-    location.reload();
-});
-
-// Update checkWinningCondition function
-function checkWinningCondition() {
-    if (gameData.score[gameData.index] > gameData.gameEnd) {
-        showWinner();
-        score.innerHTML += `<h2 class="winning">${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} coins!</h2>`;
-        actionArea.innerHTML = '';
-        document.getElementById('quit').innerHTML = "Start New Game";
-        winsound.play();
-
-    } else {
-        showCurrentScore();
+        outroOverlay.classList.remove('hidden');
     }
-}
 
+    // Event listener for starting a new game
+    document.getElementById('startNewGame').addEventListener('click', function () {
+        location.reload();
+    });
+
+    // Function to check winning condition
+    function checkWinningCondition() {
+        if (gameData.score[gameData.index] > gameData.gameEnd) {
+            showWinner();
+            score.innerHTML += `<h2 class="winning">${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} coins!</h2>`;
+            actionArea.innerHTML = '';
+            document.getElementById('quit').innerHTML = "Start New Game";
+            winsound.play(); // Play win sound
+
+        } else {
+            showCurrentScore();
+        }
+    }
 
     // Function to display the current score
     function showCurrentScore() {

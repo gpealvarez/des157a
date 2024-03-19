@@ -1,5 +1,3 @@
-
-/* Body styling */
 body {
     font-family: "Dynapuff";
     font-weight: 700;
@@ -7,10 +5,8 @@ body {
     color: #333;
     line-height: 1.5em;
     padding-top: 50px;
-    
 }
 
-/* Heading 1 styling */
 h1 {
     text-align: center;
     background-color: rgb(255, 229, 244);
@@ -18,49 +14,36 @@ h1 {
     padding: 20px;
 }
 
-/* Styling for the flip class */
 .flip {
     text-align: center;
 }
 
-/* Padding for all divs */
 div {
     padding: 10px;
 }
 
-/* Styling for the game div */
 div#game {
     padding: 0;
 }
 
-/* Styling for the quit button container */
 #quitbtn {
     padding-top: 0;
     padding-bottom: 20px;
     padding-left: 80%;
     background-color: rgb(255, 229, 244);
-
 }
 
-#quitbtn :hover{
-    background-color:#F97DAD;
-}
-
-/* Styling for buttons within the quit button container */
 #quitbtn button {
     font-size: 16px;
     padding: 10px 30px;
     cursor: pointer;
-
 }
 
-/* Styling for the flip button */
 #flip {
     font-size: 20px;
     padding: 15px 40px;
 }
 
-/* Styling for game control and score containers */
 #gamecontrol,
 #score {
     background-color: rgb(255, 229, 244);
@@ -68,14 +51,12 @@ div#game {
     padding: 0;
 }
 
-/* Alignment and padding for game control and images */
 #gamecontrol,
 img {
     text-align: center;
     padding-top: 20px;
 }
 
-/* Styling for images within the game */
 #game img {
     margin-top: 50px;
     position: absolute;
@@ -85,7 +66,6 @@ img {
     padding: 20px;
 }
 
-/* Styling for game paragraphs */
 #game p {
     font-family: "Dynapuff";
     color: #bb4480;
@@ -100,20 +80,17 @@ img {
     padding: 20px;
 }
 
-/* Styling for actions container */
 #actions {
     background-color: rgb(255, 229, 244);
     padding: 0;
 }
 
-/* Styling for coin container */
 .coin-container {
     margin-top: 30px;
     position: relative;
     text-align: center;
 }
 
-/* Styling for coin image */
 .coin-image {
     position: absolute;
     top: -50px;
@@ -122,18 +99,11 @@ img {
     padding: 20px;
 }
 
-/* Styling for piggy image */
-.piggy-image {
-    padding-top: 100px;
-}
-
-/* Styling for piggy image 2 */
+.piggy-image,
 .piggy-image2 {
     padding-top: 100px;
-    margin-left: 30px;
 }
 
-/* Styling for buttons */
 button {
     display: block;
     margin: 0 auto;
@@ -144,45 +114,30 @@ button {
     cursor: pointer;
 }
 
-button:hover{
-    background-color:#F97DAD;
-}
-
-/* Styling for buttons container */
 .buttons-container {
     text-align: center;
     padding-top: 0;
     padding-bottom: 0;
-
-
 }
 
-/* Styling for buttons within buttons container */
 .buttons-container button {
     display: inline-block;
     margin-right: 20px;
     padding: 15px 40px;
     font-size: 20px;
     cursor: pointer;
-
-
 }
 
-/* Additional styling for pass button within buttons container */
 .buttons-container #pass {
     padding: 15px 40px;
     font-size: 20px;
     cursor: pointer;
-
-
 }
 
-/* Styling for paragraphs */
 p {
     margin: 0;
 }
 
-/* Styling for score display */
 .eachscore {
     font-family: "Bebas Neue";
     font-size: 40px;
@@ -199,19 +154,12 @@ p {
     z-index: 999;
 }
 
-/* Styling for rights paragraph */
-#rights {
-    padding-bottom: 10px;
-    padding-top: 20px;
-}
-
-/* Styling for lefts paragraph */
+#rights,
 #lefts {
     padding-bottom: 10px;
     padding-top: 20px;
 }
 
-/* Styling for winning class */
 .winning {
     text-align: center;
     position: absolute;
@@ -221,68 +169,55 @@ p {
     padding: 20px;
 }
 
-/* Styling for instructions at beginning  */
-/*#instructions {
-    margin: 20px auto;
-    font-family: Comfortaa;
-    font-size: 16px;
-    max-width: 60em;
-}*/
-
 #instructions {
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Cover the entire width of the screen */
-    height: 100%; /* Cover the entire height of the screen */
-    transition: opacity 0.3s ease; /* Smooth transition for showing/hiding */
-
-
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
 }
 
-#instcont{
+#instcont {
     position: fixed;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Centering trick */
-    width: 50%; /* Adjust width as needed */
-    max-width: 600px; /* Set a maximum width if desired */
-    height: auto; /* Let the height adjust based on content */
-    background-color: #fcaac9; /* Semi-transparent black background */
-    padding: 40px; /* Padding around the content */
-    z-index: 1000; /* High z-index to ensure it appears above other content */
-    transition: opacity 0.3s ease; /* Smooth transition for showing/hiding */
-    text-align: center; /* Center the content horizontally */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-width: 600px;
+    height: auto;
+    background-color: #fcaac9;
+    padding: 40px;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    text-align: center;
     border-radius: 50px;
-    
 }
 
-/* Style for the hidden class to hide the instructions overlay */
 .hidden {
     opacity: 0;
     visibility: hidden;
-    pointer-events: none; /* Disable pointer events when hidden */
+    pointer-events: none;
 }
 
-/* Style for the instructions content */
 #instructions h2 {
-    margin: 0 0 20px; /* Add some margin to the bottom of each element */
+    margin: 0 0 20px;
     text-align: center;
-
 }
 
-#instructions p, #instructions ol, #instructions li {
-    margin: 0 0 10px; /* Add some margin to the bottom of each element */
+#instructions p,
+#instructions ol,
+#instructions li {
+    margin: 0 0 10px;
     text-align: left;
     font-family: Comfortaa;
 }
 
 #instructions ol {
-    padding-left: 20px; /* Indent the list items */
+    padding-left: 20px;
 }
 
-/* Style for the close button inside the instructions overlay */
 #instructions .closebtn {
     position: absolute;
     top: 10px;
@@ -294,16 +229,12 @@ p {
     cursor: pointer;
 }
 
-#flip:hover{
-    background-color:#F97DAD;
+#instructions .closebtn:hover {
+    color: #000;
 }
 
-#instructions .closebtn:hover{
-    color:#000;
-}
-
-#instbtn{
-    display:inline-block;
+#instbtn {
+    display: inline-block;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 15px;
@@ -313,14 +244,14 @@ p {
     margin-bottom: 0;
 }
 
-#instbtn :hover{
-    background-color:#F97DAD;
+#instbtn:hover {
+    background-color: #f97dad;
 }
 
 .introverlay {
     position: fixed;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
@@ -331,26 +262,24 @@ p {
     pointer-events: none;
 }
 
-  
-  .introcont img {
-    max-width: 120vw; /* Ensure image doesn't exceed container width */
-    max-height: 120vh; /* Ensure image doesn't exceed container height */
-  }
-  
-  .introcont {
+.introcont img {
+    max-width: 120vw;
+    max-height: 120vh;
+}
+
+.introcont {
     text-align: center;
     color: white;
-  }
-  
-  .introverlay.hide {
+}
+
+.introverlay.hide {
     opacity: 0;
-  }
-  
-  
-  #outroverlay {
+}
+
+#outroverlay {
     position: fixed;
-    top: 47%; /* Center vertically */
-    left: 50%; /* Center horizontally */
+    top: 47%;
+    left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
@@ -363,41 +292,38 @@ p {
     color: black;
     text-align: center;
     z-index: 1200;
-    position: relative; /* Ensure proper positioning for absolute elements */
+    position: relative;
 }
 
 #winnerText {
-    font-size: 30px; /* Adjust as needed */
-    margin-bottom: 20px; /* Add margin to separate the text from other elements */
+    font-size: 30px;
+    margin-bottom: 20px;
     z-index: 1300;
     position: fixed;
-    top: 18%; /* Center vertically */
-    left: 50%; /* Center horizontally */
+    top: 18%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    color: #FAB03E;
-
+    color: #fab03e;
 }
 
 #outrocont button {
-    position: absolute; /* Position the button absolutely within the container */
-    top: 85%; /* Center the button vertically */
-    left: 50%; /* Center the button horizontally */
-    transform: translate(-50%, -50%); /* Center the button perfectly */
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 16px;
     padding: 10px 30px;
     cursor: pointer;
     z-index: 1200;
-
 }
 
 #outrocont img {
-    max-width: 120vw; /* Ensure image doesn't exceed container width */
-    max-height: 120vh; /* Ensure image doesn't exceed container height */
-  }
-
+    max-width: 120vw;
+    max-height: 120vh;
+}
 
 input {
-    color: #F97DAD;
+    color: #f97dad;
     display: inline-block;
     width: 130px;
     border-radius: 30px;
@@ -407,13 +333,12 @@ input {
     margin-left: 5px;
 }
 
-input[type=text]:focus{
+input[type=text]:focus {
     border-radius: 30px;
-    border: solid #F97DAD;
-
+    border: solid #f97dad;
 }
-input:hover{
+
+input:hover {
     border-radius: 30px;
-    border: solid #F97DAD;
- 
+    border: solid #f97dad;
 }
