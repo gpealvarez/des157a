@@ -1,3 +1,4 @@
+
 /* Body styling */
 body {
     font-family: "Dynapuff";
@@ -38,12 +39,19 @@ div#game {
     padding-bottom: 20px;
     padding-left: 80%;
     background-color: rgb(255, 229, 244);
+
+}
+
+#quitbtn :hover{
+    background-color:#F97DAD;
 }
 
 /* Styling for buttons within the quit button container */
 #quitbtn button {
     font-size: 16px;
     padding: 10px 30px;
+    cursor: pointer;
+
 }
 
 /* Styling for the flip button */
@@ -133,6 +141,11 @@ button {
     border: none;
     border-radius: 50px;
     padding: 15px 40px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color:#F97DAD;
 }
 
 /* Styling for buttons container */
@@ -140,6 +153,7 @@ button {
     text-align: center;
     padding-top: 0;
     padding-bottom: 0;
+
 
 }
 
@@ -149,6 +163,8 @@ button {
     margin-right: 20px;
     padding: 15px 40px;
     font-size: 20px;
+    cursor: pointer;
+
 
 }
 
@@ -156,6 +172,8 @@ button {
 .buttons-container #pass {
     padding: 15px 40px;
     font-size: 20px;
+    cursor: pointer;
+
 
 }
 
@@ -178,7 +196,7 @@ p {
     width: 85%;
     max-width: 85%;
     margin: 0 auto;
-    z-index: 9999;
+    z-index: 999;
 }
 
 /* Styling for rights paragraph */
@@ -201,14 +219,201 @@ p {
     left: 51%;
     transform: translateX(-50%);
     padding: 20px;
-    z-index: 9999;
 }
 
 /* Styling for instructions at beginning  */
-#instructions {
+/*#instructions {
     margin: 20px auto;
     font-family: Comfortaa;
     font-size: 16px;
     max-width: 60em;
+}*/
+
+#instructions {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the entire width of the screen */
+    height: 100%; /* Cover the entire height of the screen */
+    transition: opacity 0.3s ease; /* Smooth transition for showing/hiding */
+
+
 }
 
+#instcont{
+    position: fixed;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Centering trick */
+    width: 50%; /* Adjust width as needed */
+    max-width: 600px; /* Set a maximum width if desired */
+    height: auto; /* Let the height adjust based on content */
+    background-color: #fcaac9; /* Semi-transparent black background */
+    padding: 40px; /* Padding around the content */
+    z-index: 1000; /* High z-index to ensure it appears above other content */
+    transition: opacity 0.3s ease; /* Smooth transition for showing/hiding */
+    text-align: center; /* Center the content horizontally */
+    border-radius: 50px;
+    
+}
+
+/* Style for the hidden class to hide the instructions overlay */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Disable pointer events when hidden */
+}
+
+/* Style for the instructions content */
+#instructions h2 {
+    margin: 0 0 20px; /* Add some margin to the bottom of each element */
+    text-align: center;
+
+}
+
+#instructions p, #instructions ol, #instructions li {
+    margin: 0 0 10px; /* Add some margin to the bottom of each element */
+    text-align: left;
+    font-family: Comfortaa;
+}
+
+#instructions ol {
+    padding-left: 20px; /* Indent the list items */
+}
+
+/* Style for the close button inside the instructions overlay */
+#instructions .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#flip:hover{
+    background-color:#F97DAD;
+}
+
+#instructions .closebtn:hover{
+    color:#000;
+}
+
+#instbtn{
+    display:inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+    justify-content: right;
+    margin-bottom: 0;
+}
+
+#instbtn :hover{
+    background-color:#F97DAD;
+}
+
+.introverlay {
+    position: fixed;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+  
+  .introcont img {
+    max-width: 120vw; /* Ensure image doesn't exceed container width */
+    max-height: 120vh; /* Ensure image doesn't exceed container height */
+  }
+  
+  .introcont {
+    text-align: center;
+    color: white;
+  }
+  
+  .introverlay.hide {
+    opacity: 0;
+  }
+  
+  
+  #outroverlay {
+    position: fixed;
+    top: 47%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#outrocont {
+    color: black;
+    text-align: center;
+    z-index: 1200;
+    position: relative; /* Ensure proper positioning for absolute elements */
+}
+
+#winnerText {
+    font-size: 30px; /* Adjust as needed */
+    margin-bottom: 20px; /* Add margin to separate the text from other elements */
+    z-index: 1300;
+    position: fixed;
+    top: 18%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    color: #FAB03E;
+
+}
+
+#outrocont button {
+    position: absolute; /* Position the button absolutely within the container */
+    top: 85%; /* Center the button vertically */
+    left: 50%; /* Center the button horizontally */
+    transform: translate(-50%, -50%); /* Center the button perfectly */
+    font-size: 16px;
+    padding: 10px 30px;
+    cursor: pointer;
+    z-index: 1200;
+
+}
+
+#outrocont img {
+    max-width: 120vw; /* Ensure image doesn't exceed container width */
+    max-height: 120vh; /* Ensure image doesn't exceed container height */
+  }
+
+
+input {
+    color: #F97DAD;
+    display: inline-block;
+    width: 130px;
+    border-radius: 30px;
+    border: solid white;
+    background-color: white;
+    text-align: center;
+    margin-left: 5px;
+}
+
+input[type=text]:focus{
+    border-radius: 30px;
+    border: solid #F97DAD;
+
+}
+input:hover{
+    border-radius: 30px;
+    border: solid #F97DAD;
+ 
+}

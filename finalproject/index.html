@@ -19,15 +19,62 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    
     <div id="score"></div>
     <div id="gamecontrol">
         <h1>Piggy Game</h1>
         <img src="images/piggy.png" alt="piggy left" width="500">
-        <p id="instructions">Welcome to the Piggy Game! It's a two-player challenge where victory goes to the one with the most coins in their piggy bank. Aim for high-value coins, and if luck is on your side, keep flipping until you're satisfied with your haul before passing the turn. Beware of Fake Coins because they are illegal, and if you draw one, you lose all your money. And if you land on a $1 coin, your luck runs out, and it's the other player's turn. Ready to play?</p>
+        
+        <button id="instbtn">?</button>
+
+       <div>
+            <div>
+                <label for="player1">Player 1 Name:</label>
+                <input type="text" id="player1" placeholder="Enter Name">
+            </div>
+            <div>
+                <label for="player2">Player 2 Name:</label>
+                <input type="text" id="player2" placeholder="Enter Name">
+            </div>
+        </div>
         <button id="startgame">Randomly pick first player and start!</button>
+        
+        <div id="instructions" class="hidden">
+            <div id="instcont">
+                <button class="closebtn">x</button> <!-- Close button -->
+
+
+                <h2>Welcome to the Piggy Game!</h2>
+                <p>It's a two-player challenge where the goal is to collect the most coins in your piggy bank. Here's how to play:</p>
+                <ol>
+                <li>Each turn, you'll have the chance to flip a coin.</li>
+                <li>Aim for high-value coins to maximize your winnings.</li>
+                <li>You can keep flipping coins until you decide to stop and pass the turn to your opponent.</li>
+                <li>But beware! There are Fake Coins in the mix. If you draw one, you lose all your money.</li>
+                <li>Additionally, if you land on a $1 coin, your turn ends, and it's your opponent's chance to play.</li>
+                </ol>
+                <p>Ready to begin? Let's see who can fill their piggy bank with the most coins!</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="introverlay" id="introverlay">
+        <div class="introcont">
+            <img src="images/introimg.png" alt="Introduction Image">
+        </div>
     </div>
     <div id="game"></div>
     <div id="actions"></div>
     <div id="quitbtn"></div>
+    <div id="outroverlay" class="hidden">
+        <div id="outrocont">
+            <img src="images/outroimg.png" alt="Introduction Image">
+            <h2 id="winnerText"></h2>
+            <button id="startNewGame">Start New Game</button>
+        </div>
+    </div>
+    
+    
+    
 </body>
 </html>
